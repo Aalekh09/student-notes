@@ -14,17 +14,22 @@ const courses = [
     name: 'Computer',
     notes: [
       { title: 'Advance Excel', url: 'https://drive.google.com/file/d/1j9G9mOaQJRER61F0aFvtm__URUotLfDV/view?usp=sharing' },
-      { title: 'Basic Accounting Technique', url: 'https://docs.google.com/document/d/1gkmV8QZchB5MQs2dXPi1h_5HmGD4YUW8/edit?usp=sharing&ouid=112683413945581529167&rtpof=true&sd=true' },
-      { title: 'Internet in Computers', url: 'https://drive.google.com/file/d/1BD8w7oomJBp3qkSccFPS_x-Ea8qqMEr3/view?usp=sharing' },
-      { title: 'MS Word', url: 'https://drive.google.com/file/d/1sS63-vwtqTwNMQcvVheR-W5xLQP3NTf5/view?usp=sharing' },
-      { title: 'MS Access', url: 'https://drive.google.com/file/d/1xF_dxDJCXsofvsBzTmNPIokpMCiz2Q-w/view?usp=sharing' },
-      { title: 'MS Excel', url: 'https://drive.google.com/file/d/1yoIVT_2p7gpT6v88I-IfzUw2J0gU0HzE/view?usp=sharing' },
+      { title: 'Basic Accounting Technique', url: 'https://drive.google.com/file/d/1sLjIoPd14u5zln6kUO02rGqkJCSrq_8E/view?usp=drive_link' },
+      { title: 'Internet in Computers', url: 'https://drive.google.com/file/d/1sFj6pyVsWktxkpZWCD5Yk3HNQ6EMsXvt/view?usp=sharing' },
+      { title: 'MS Word', url: 'https://drive.google.com/file/d/1JZzD94y9CxRD4O0KC_YOnMYVLuLgEhdV/view?usp=drive_link' },
+      { title: 'MS Access', url: 'https://drive.google.com/file/d/1eJmEhtqiSFs6Imb1ECi-B_8znEHiL2EX/view?usp=drive_link' },
+      { title: 'MS Excel', url: 'https://drive.google.com/file/d/1MIP70FE2nbmEaxjiIeKiYnHW8Do7xfD6/view?usp=drive_link' },
+      { title: 'PowerPoint', url: 'https://drive.google.com/file/d/1jw4Sd9e2eOMRfMdSoTkUR_UHXomcF440/view?usp=drive_link' },
     ],
   },
   {
     name: 'Programming',
     notes: [
-      { title: 'Java Notes', url: 'https://drive.google.com/file/d/1HriOSFDuEsgTDMIiC0GS4SJ0YLuDH0ck/view?usp=sharing' },
+      { title: 'Java Notes', url: 'https://drive.google.com/file/d/13BHCxSrK4VX20O2IzT5jrw0_b14stqAO/view?usp=drive_link' },
+      { title: 'C Notes', url: 'https://drive.google.com/file/d/1I_MduTI2BfeL_biOQKB2EW4OG_ub_n_l/view?usp=drive_link' },
+      { title: 'DSA Notes', url: 'https://drive.google.com/file/d/1kpQkeSdksKvyeqbuGz2lUR0sI2jQwoHq/view?usp=drive_link' },
+      { title: 'Pyhton Notes', url: 'https://drive.google.com/file/d/1JOMUhLh8z_6PPjTw8zBNzGMygRSt9X65/view?usp=drive_link' },
+      { title: 'HTML Notes', url: 'https://drive.google.com/file/d/1vDxMasRz0i7Fd6w8Y_B9m2PrTlNtyjCx/view?usp=drive_link' },
     ],
   },
 ];

@@ -57,7 +57,7 @@ const Login = ({ onLogin }) => {
       <div className="login-logo">SN</div>
       <h2 className="login-title">Student Notes</h2>
       <div className="login-institute">Saha Institute of Management &amp; Technology</div>
-      <p className="login-subtitle">Sign in with your school email to access your notes.</p>
+      <p className="login-subtitle">Sign in with your email to access the notes.</p>
       <div className="login-btn-wrapper">
         <GoogleLogin
           onSuccess={credentialResponse => {

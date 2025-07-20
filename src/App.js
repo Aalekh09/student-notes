@@ -39,6 +39,14 @@ const courses = [
       { title: 'Tally Prime Shortcuts', url: 'https://drive.google.com/file/d/1bbofTenHWFBwyu4ZTtjdjzRS8OZ5F-CM/view?usp=sharing' },
     ],
   },
+  {
+    name: 'Assignments',
+    notes: [
+      { title: 'Ms Excel 1', url: 'https://drive.google.com/file/d/19qD8vSMOtaRV2ni4EhiD3nkvu10u2FNy/view?usp=sharing' },
+      { title: 'Ms Excel 2', url: 'https://drive.google.com/file/d/1Kp6OLgTm2ViPAYOALqnCTmR1aeDUwfqi/view?usp=sharing' },
+      { title: 'Ms Word ', url: 'https://drive.google.com/file/d/14rNML2eXAbxSvN6hP2Wo1MEd6myN_eac/view?usp=sharing' },
+    ],
+  },
 ];
 
 function App() {

@@ -25,11 +25,18 @@ const courses = [
   {
     name: 'Programming',
     notes: [
-      { title: 'Java Notes', url: 'https://drive.google.com/file/d/13BHCxSrK4VX20O2IzT5jrw0_b14stqAO/view?usp=drive_link' },
+      { title: 'Java Notes', url: 'https://drive.google.com/file/d/1Sywx3jQFqVm0Dzv3GCGS3NxUl2ymufGV/view?usp=sharing' },
       { title: 'C Notes', url: 'https://drive.google.com/file/d/1I_MduTI2BfeL_biOQKB2EW4OG_ub_n_l/view?usp=drive_link' },
       { title: 'DSA Notes', url: 'https://drive.google.com/file/d/1kpQkeSdksKvyeqbuGz2lUR0sI2jQwoHq/view?usp=drive_link' },
       { title: 'Pyhton Notes', url: 'https://drive.google.com/file/d/1JOMUhLh8z_6PPjTw8zBNzGMygRSt9X65/view?usp=drive_link' },
       { title: 'HTML Notes', url: 'https://drive.google.com/file/d/1vDxMasRz0i7Fd6w8Y_B9m2PrTlNtyjCx/view?usp=drive_link' },
+    ],
+  },
+  {
+    name: 'Shortcut Keys',
+    notes: [
+      { title: 'Ms Excel Shortcuts', url: 'https://drive.google.com/file/d/126BFEzPnkwMe7dO33uFfsUtX-4aXE5te/view?usp=sharing' },
+      { title: 'Tally Prime Shortcuts', url: 'https://drive.google.com/file/d/1bbofTenHWFBwyu4ZTtjdjzRS8OZ5F-CM/view?usp=sharing' },
     ],
   },
 ];

@@ -8,75 +8,77 @@ const getInitials = (name) => {
     .toUpperCase();
 };
 
+const getFileIcon = (title) => {
+  const lower = title.toLowerCase();
+  if (lower.includes('excel') || lower.includes('spreadsheet')) return '📊';
+  if (lower.includes('word') || lower.includes('document')) return '📄';
+  if (lower.includes('powerpoint') || lower.includes('presentation')) return '📽️';
+  if (lower.includes('pdf')) return '📕';
+  if (lower.includes('java') || lower.includes('python') || lower.includes('programming')) return '💻';
+  if (lower.includes('html') || lower.includes('web')) return '🌐';
+  if (lower.includes('autocad') || lower.includes('drawing')) return '📐';
+  if (lower.includes('shortcut') || lower.includes('key')) return '⌨️';
+  return '📚';
+};
+
 const NotesList = ({ notes, onDownload, course, user, onBack }) => {
   return (
-    <div className="notes-list" style={{ maxWidth: 420, margin: '0 auto' }}>
-      {/* Top Bar */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        padding: '12px 0 24px 0',
-        borderBottom: '1px solid #e0e0e0',
-        marginBottom: 24,
-      }}>
-        <button onClick={onBack} style={{
-          background: 'none',
-          border: 'none',
-          fontSize: 22,
-          color: '#1976d2',
-          marginRight: 10,
-          cursor: 'pointer',
-        }}>&larr;</button>
-        <div style={{
-          width: 40,
-          height: 40,
-          borderRadius: '50%',
-          background: 'linear-gradient(135deg, #1976d2 60%, #42a5f5 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white',
-          fontWeight: 700,
-          fontSize: 18,
-          marginRight: 10,
-        }}>{getInitials(user.name)}</div>
-        <div>
-          <div style={{ fontWeight: 600, fontSize: 15 }}>{user.name}</div>
-          <div style={{ fontSize: 12, color: '#888' }}>{user.email}</div>
+    <div className="notes-list">
+      <div className="page-header">
+        <div className="header-nav">
+          <button className="back-button" onClick={onBack}>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M12.5 15l-5-5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Back
+          </button>
+          <div className="user-profile">
+            <div className="user-avatar">
+              {getInitials(user.name)}
+            </div>
+            <div className="user-info">
+              <h3 className="user-name">{user.name}</h3>
+              <p className="user-email">{user.email}</p>
+            </div>
+          </div>
         </div>
       </div>
-      <h2 style={{ fontWeight: 700, fontSize: '1.2em', marginBottom: 12, color: '#1976d2', textAlign: 'center' }}>{course} Notes</h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {notes.map((note) => (
-          <div key={note.title} style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            background: '#f5f8fd',
-            borderRadius: 12,
-            padding: '16px 18px',
-            boxShadow: '0 1px 4px rgba(25, 118, 210, 0.06)',
-          }}>
-            <span style={{ fontWeight: 500, fontSize: 16 }}>{note.title}</span>
-            <button
-              style={{
-                padding: '8px 18px',
-                borderRadius: '8px',
-                border: 'none',
-                background: 'linear-gradient(90deg, #1976d2 70%, #42a5f5 100%)',
-                color: '#fff',
-                fontWeight: 600,
-                fontSize: 15,
-                cursor: 'pointer',
-                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
-                transition: 'background 0.2s',
-              }}
-              onClick={() => onDownload(note)}
+
+      <div className="notes-content">
+        <div className="section-header">
+          <h2 className="section-title">{course} Materials</h2>
+          <p className="section-subtitle">{notes.length} study materials available for download</p>
+        </div>
+
+        <div className="notes-grid">
+          {notes.map((note, index) => (
+            <div
+              key={note.title}
+              className="note-card"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              Download
-            </button>
-          </div>
-        ))}
+              <div className="note-header">
+                <div className="note-icon">
+                  {getFileIcon(note.title)}
+                </div>
+                <div className="note-info">
+                  <h3 className="note-title">{note.title}</h3>
+                  <p className="note-type">Study Material</p>
+                </div>
+              </div>
+
+              <button
+                className="download-button"
+                onClick={() => onDownload(note)}
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 1v10M4 7l4 4 4-4M2 13h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Download
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

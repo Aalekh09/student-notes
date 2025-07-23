@@ -18,7 +18,7 @@ const courses = [
       { title: 'Internet in Computers', url: 'https://drive.google.com/file/d/1sFj6pyVsWktxkpZWCD5Yk3HNQ6EMsXvt/view?usp=sharing' },
       { title: 'MS Word', url: 'https://drive.google.com/file/d/1JZzD94y9CxRD4O0KC_YOnMYVLuLgEhdV/view?usp=drive_link' },
       { title: 'MS Access', url: 'https://drive.google.com/file/d/1eJmEhtqiSFs6Imb1ECi-B_8znEHiL2EX/view?usp=drive_link' },
-      { title: 'MS Excel', url: 'https://drive.google.com/file/d/1MIP70FE2nbmEaxjiIeKiYnHW8Do7xfD6/view?usp=drive_link' },
+      { title: 'MS Excel', url: 'https://docs.google.com/document/d/1axvdde_Yz7_6TsfUBFdOdwgAnp21SF3x/edit?usp=sharing&ouid=112683413945581529167&rtpof=true&sd=true' },
       { title: 'PowerPoint', url: 'https://drive.google.com/file/d/1jw4Sd9e2eOMRfMdSoTkUR_UHXomcF440/view?usp=drive_link' },
     ],
   },
@@ -45,6 +45,12 @@ const courses = [
       { title: 'Ms Excel 1', url: 'https://drive.google.com/file/d/19qD8vSMOtaRV2ni4EhiD3nkvu10u2FNy/view?usp=sharing' },
       { title: 'Ms Excel 2', url: 'https://drive.google.com/file/d/1Kp6OLgTm2ViPAYOALqnCTmR1aeDUwfqi/view?usp=sharing' },
       { title: 'Ms Word ', url: 'https://drive.google.com/file/d/14rNML2eXAbxSvN6hP2Wo1MEd6myN_eac/view?usp=sharing' },
+    ],
+  },
+  {
+    name: 'Drawings',
+    notes: [
+      { title: 'AutoCad Drawings', url: 'https://drive.google.com/file/d/199DEkoDjvEaZLUIr7yonhCMFQlOHpzmb/view?usp=sharing' },
     ],
   },
 ];
@@ -82,7 +88,6 @@ function App() {
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
       <div className="App">
-        <h1>Student Notes</h1>
         {!user ? (
           <Login onLogin={handleLogin} />
         ) : !selectedCourse ? (

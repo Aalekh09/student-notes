@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 
 function decodeJwtResponse(token) {
@@ -16,60 +16,63 @@ function decodeJwtResponse(token) {
 }
 
 const Login = ({ onLogin }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  if (!isMobile) {
-    return (
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        background: 'rgba(255,255,255,0.98)',
-        zIndex: 9999,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        padding: 32,
-      }}>
-        <h2 style={{ color: '#d32f2f', fontSize: '2em', marginBottom: 16 }}>Mobile Only</h2>
-        <p style={{ color: '#333', fontSize: '1.1em' }}>
-          This page is designed for mobile devices.<br />
-          Please open it on your phone or resize your browser window.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <div className="login-card">
-      <div className="login-logo">SN</div>
-      <h2 className="login-title">Student Notes</h2>
-      <div className="login-institute">Saha Institute of Management &amp; Technology</div>
-      <p className="login-subtitle">Sign in with your email to access the notes.</p>
-      <div className="login-btn-wrapper">
-        <GoogleLogin
-          onSuccess={credentialResponse => {
-            const user = decodeJwtResponse(credentialResponse.credential);
-            onLogin({ name: user.name, email: user.email });
-          }}
-          onError={() => {
-            alert('Login Failed');
-          }}
-          useOneTap
-          width="100%"
-        />
+    <div className="login-container">
+      <div className="login-card">
+        <div className="login-header">
+          <div className="login-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="12" fill="url(#gradient)" />
+              <path d="M12 18h24v2H12v-2zm0 6h24v2H12v-2zm0 6h16v2H12v-2z" fill="white" />
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#667eea" />
+                  <stop offset="100%" stopColor="#764ba2" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="login-text">
+            <h1 className="login-title">Student Notes</h1>
+            <p className="login-institute">Saha Institute of Management & Technology</p>
+          </div>
+        </div>
+        
+        <div className="login-content">
+          <h2 className="login-welcome">Welcome Back</h2>
+          <p className="login-subtitle">Sign in with your institutional email to access course materials and notes.</p>
+          
+          <div className="login-btn-wrapper">
+            <GoogleLogin
+              onSuccess={credentialResponse => {
+                const user = decodeJwtResponse(credentialResponse.credential);
+                onLogin({ name: user.name, email: user.email });
+              }}
+              onError={() => {
+                alert('Login Failed. Please try again.');
+              }}
+              useOneTap
+              theme="outline"
+              size="large"
+              width="100%"
+            />
+          </div>
+          
+          <div className="login-features">
+            <div className="feature-item">
+              <span className="feature-icon">📚</span>
+              <span>Access course notes</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">📱</span>
+              <span>Mobile & desktop friendly</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">🔒</span>
+              <span>Secure authentication</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

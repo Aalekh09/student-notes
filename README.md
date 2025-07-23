@@ -157,4 +157,4 @@ If you have any questions or need support, please:
 
 ---
 
-**Made with ❤️ for educational institutions**
+**Made with ❤️ for educational institutions** 

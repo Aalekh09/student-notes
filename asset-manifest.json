@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/student-notes/static/css/main.755cc77c.css",
-    "main.js": "/student-notes/static/js/main.9d537f62.js",
+    "main.js": "/student-notes/static/js/main.7b437856.js",
     "static/js/488.95364b60.chunk.js": "/student-notes/static/js/488.95364b60.chunk.js",
     "service-worker.js": "/student-notes/service-worker.js",
     "index.html": "/student-notes/index.html",
     "main.755cc77c.css.map": "/student-notes/static/css/main.755cc77c.css.map",
-    "main.9d537f62.js.map": "/student-notes/static/js/main.9d537f62.js.map",
+    "main.7b437856.js.map": "/student-notes/static/js/main.7b437856.js.map",
     "488.95364b60.chunk.js.map": "/student-notes/static/js/488.95364b60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.755cc77c.css",
-    "static/js/main.9d537f62.js"
+    "static/js/main.7b437856.js"
   ]
 }

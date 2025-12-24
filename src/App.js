@@ -59,6 +59,7 @@ const courses = [
       { title: 'Fundamental of Computer', url: 'https://drive.google.com/file/d/1aET37ZSUQYxt4A2KXR5FcruXTHtuFqhK/view?usp=sharing' },
       { title: 'MS Word', url: 'https://drive.google.com/file/d/16qG7TroueEkpye7uDSHzgfEFhYVp7sjj/view?usp=sharing' },
       { title: 'Combine Fundamantal and MS Word', url: 'https://drive.google.com/file/d/13wWoomN2pm7XkJa0FVbZ4xxfe4JGw3OR/view?usp=sharing' },
+      { title: 'MS Access', url: 'https://drive.google.com/file/d/132rr9CIPhdGFotuDNqiaumVTPm2M5699/view?usp=sharing' },
     ],
   },
 ];

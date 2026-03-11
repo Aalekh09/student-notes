@@ -60,7 +60,7 @@ const courses = [
       { title: 'MS Word', url: 'https://drive.google.com/file/d/16qG7TroueEkpye7uDSHzgfEFhYVp7sjj/view?usp=sharing' },
       { title: 'Combine Fundamantal and MS Word', url: 'https://drive.google.com/file/d/13wWoomN2pm7XkJa0FVbZ4xxfe4JGw3OR/view?usp=sharing' },
       { title: 'MS Access', url: 'https://drive.google.com/file/d/132rr9CIPhdGFotuDNqiaumVTPm2M5699/view?usp=sharing' },
-      { title: 'MS EXCEL', url: 'https://drive.google.com/file/d/1Z0sSkP4GSMtPEVi2XWG2lg26YRtXTnsW/view?usp=sharing' },
+      // { title: 'MS EXCEL', url: 'https://drive.google.com/file/d/1Z0sSkP4GSMtPEVi2XWG2lg26YRtXTnsW/view?usp=sharing' },
       { title: 'INTERNET', url: 'https://drive.google.com/file/d/15HKJQi2SONLvgUfLuOt8Ex-10O7IU9ym/view?usp=sharing' },
     ],
   },

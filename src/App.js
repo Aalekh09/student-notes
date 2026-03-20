@@ -62,6 +62,7 @@ const courses = [
       { title: 'MS Access', url: 'https://drive.google.com/file/d/132rr9CIPhdGFotuDNqiaumVTPm2M5699/view?usp=sharing' },
       // { title: 'MS EXCEL', url: 'https://drive.google.com/file/d/1Z0sSkP4GSMtPEVi2XWG2lg26YRtXTnsW/view?usp=sharing' },
       { title: 'INTERNET', url: 'https://drive.google.com/file/d/15HKJQi2SONLvgUfLuOt8Ex-10O7IU9ym/view?usp=sharing' },
+      { title: 'TALLY', url: 'https://drive.google.com/file/d/1nI6kKxVDJ1uiTFwM3qVxWgjSK9hjUGy1/view?usp=sharing' },
     ],
   },
 ];
